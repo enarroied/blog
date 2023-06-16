@@ -1,38 +1,64 @@
 # outline for a myst_nb project with sphinx
 # build with: sphinx-build -nW --keep-going -b html . ./_build/html
 
-# -- Project information -----------------------------------------------------
-import sys
-
-sys.path.append("scripts")
-sys.path.append(".")
-from social_media import add_social_media_js, SocialPost
-
-project = "Eric Narro Data"
+# -- Project information 
+project = "Eric Narro Data 📊" 
 copyright = "2023, Eric Narro"
 author = "Eric Narro"
+html_title = "Eric Narro Data 📊"
+
+
+#file system and favicon:
+html_static_path = ["_static"]
+templates_path = ["_templates"]
+html_css_files = ["css/mycss.css"]
+html_favicon = "_static/images/logo.ico"
+
+html_sidebars = {
+    "index": ["hello.html"],
+    "about": ["hello.html"],
+    "projects": ["hello.html"],
+    "blog": ["ablog/categories.html", "ablog/tagcloud.html", "ablog/archives.html"],
+    "blog/**": ["ablog/postcard.html", "ablog/recentposts.html", "ablog/archives.html"],
+}
+
+# OpenGraph config
+ogp_site_url = "https://www.ericnarrodata.com/"
+ogp_image = "_static/images/logo_landscape.png"
+ogp_social_cards = {"line_color": "#4078c0", "image": "_static/images/logo.png"}
+
+ogp_custom_meta_tags = [
+    '<meta name="twitter:card" content="summary_large_image" />',
+    '<meta name="twitter:site" content="@enarrodata" />',
+    '<meta name="twitter:title" content="📊 Eric Narro Data" />',
+]
+
 
 # load extensions
 extensions = [
     "myst_nb",
     "ablog",
-    "sphinx_panels",
     "sphinx_design",
-    "jupyter_sphinx",
     "sphinx.ext.intersphinx",
-    "matplotlib.sphinxext.plot_directive",
     "sphinx_copybutton",
-    "sphinx_examples",
-    "sphinxext.opengraph",
-    # "nbsphinx"
+    "sphinxext.opengraph"
 ]
 
 # specify project details
 master_doc = "index"
-project = "Eric Narro Data 📊"  # Meta: Site Name
 
 # basic build settings
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints"]
+exclude_patterns = [
+    "_build",
+    "Thumbs.db",
+    ".DS_Store",
+    "*import_posts*",
+    "**/pandoc_ipynb/inputs/*",
+    "README.md",
+    "**/.ipynb_checkpoints/*",
+    "docs",
+]
+
 nitpicky = True
 
 # Add theme
@@ -40,7 +66,7 @@ html_theme = "pydata_sphinx_theme"
 
 html_theme_options = {
     "search_bar_text": "Search this site...",
-    "analytics": {"google_analytics_id": "UA-88310237-1"},
+    "analytics": {"google_analytics_id": "G-5KG8VVT2E8"},
     "icon_links": [
         {
             "name": "GitHub",
@@ -57,43 +83,32 @@ html_theme_options = {
             "url": "https://www.linkedin.com/in/ericnarro/",
             "icon": "fa-brands fa-linkedin",
         },
+        {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/profile.php?id=100092198722786",
+            "icon": "fa-brands fa-facebook",
+        },
+        {
+            "name": "Instagram",
+            "url": "https://www.instagram.com/ericnarrodata/",
+            "icon": "fa-brands fa-instagram",
+        },
     ],
 }
-
-html_favicon = "_static/images/logo.ico"
-html_title = "📊 Eric Narro Data "
-html_static_path = ["_static"]
-
 
 # https://stackoverflow.com/questions/46269345/how-to-embed-plotly-graphs-in-sphinx-documentation-and-nbsphinx
 html_js_files = [
     "js/custom.js",
-    # https://myst-nb.readthedocs.io/en/latest/render/interactive.html?highlight=plotly#plotly
     "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js",
 ]
 
 
-html_css_files = ["css/mycss.css"]
-
-templates_path = ["_templates"]
-exclude_patterns = [
-    "_build",
-    "Thumbs.db",
-    ".DS_Store",
-    "*import_posts*",
-    "**/pandoc_ipynb/inputs/*",
-    "README.md",
-    "**/.ipynb_checkpoints/*",
-    "docs",
+# MyST
+myst_enable_extensions = [
+    "colon_fence", # ::: syntax
+    "deflist", #Definitiopn lists
+    "html_image", # to add <html> tags with more flexibility
 ]
-
-html_sidebars = {
-    "index": ["hello.html"],
-    "about": ["hello.html"],
-    "projects": ["hello.html"],
-    "blog": ["ablog/categories.html", "ablog/tagcloud.html", "ablog/archives.html"],
-    "blog/**": ["ablog/postcard.html", "ablog/recentposts.html", "ablog/archives.html"],
-}
 
 #############################################################################
 ## Copied from:
@@ -105,26 +120,8 @@ redirect_folders = {
 }
 #############################################################################
 
-
-# -- MyST and MyST-NB ---------------------------------------------------
-
-# MyST
-myst_enable_extensions = [
-    "colon_fence",
-    "deflist",
-    "html_image",
-]
-
-# MyST-NB
-# Don't execute anything by default because many old posts don't execute anymore
-# and this slows down build times.
-# Instead if I want something to execute, manually set it in the post's metadata.
-nb_execution_mode = "auto"
-
-
 # -- ABlog ---------------------------------------------------
 
-# blog_baseurl = "https://ericnarrodata.com"
 blog_title = "Eric Narro Data 📊"
 blog_path = "blog"
 blog_post_pattern = "blog/*/*"
@@ -136,18 +133,7 @@ post_auto_image = 1
 post_auto_excerpt = 2
 
 
-# OpenGraph config
-ogp_site_url = "https://www.ericnarrodata.com/"
-ogp_image = "_static/images/logo_landscape.png"
-ogp_social_cards = {"line_color": "#4078c0", "image": "_static/images/logo.png"}
-
-ogp_custom_meta_tags = [
-    '<meta name="twitter:card" content="summary_large_image" />',
-    '<meta name="twitter:site" content="@enarrodata" />',
-    '<meta name="twitter:title" content="📊 Eric Narro Data" />',
-    #'<meta name="twitter:description" content="Eric Narro\'s Blog. Data Anlysis 📊 | GIS 🌍 | Python 🐍 | Getting your first job as a Data Anlyst. I share insights, thoughts, tools to grow as a data analyst." />',
-    #'<meta name="twitter:image" content="https://ericnarrodata.com/_static/images/logo_landscape.png" />',
-]
+################
 
 
 ## myst_nb default settings
