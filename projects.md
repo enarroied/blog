@@ -1,9 +1,9 @@
 ---
-html_meta:
-  "description lang=en": "Eric Narro's projects. I write on Medium 🖋️ | Check my github repositories, I have created a QGIS plugin and several python 🐍 scripts."
-  "keywords": "Data Analysis, Python, QGIS"
-  "property=og:locale": "en_US"
-
+myst:
+  html_meta:
+    description: "Eric Narro's projects. I write on Medium 🖋️ | Check my GitHub repositories, I have created a QGIS plugin and several Python 🐍 scripts."
+    keywords: "Data Analysis, Python, QGIS"
+    property_og_locale: "en_US"
 ---
 # My projects
 
@@ -20,7 +20,7 @@ Some of my personal projects
 ````{grid-item}
 :columns: 9
 
-In the begining of 2023, I started writing on [Medium](https://medium.com/@ericnarro). I have always liked writing and I think it is a good way to enhance communication skill and re-inforce my knowledge on the different subjects I talk about, which is mostly data analysis and python. I also talk about my career and how I changed my path.
+In the begining of 2023, I started writing on [Medium](https://medium.com/@ericnarro). I have always liked writing and I think it is a good way to enhance communication skills and re-inforce my knowledge on the different subjects I talk about, which is mostly data analysis and python. I also talk about my career and how I changed my path.
 ````
 
 `````

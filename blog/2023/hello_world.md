@@ -2,8 +2,6 @@
 tags: sphinx
 date: "2023-04-23"
 category: "Blog"
-og:
-  image: https://ericnarrodata.com/_images/caudeau.JPG
 jupytext:
   text_representation:
     extension: .md
@@ -15,11 +13,6 @@ kernelspec:
   language: python
   name: python3
 ---
-
-```{raw-cell}
-.. post:: 23 Apr 2023
-    :category: Blog
-```
 
 # Hello you all, in this World! 🌍
 
@@ -46,7 +39,7 @@ After some research, I found out Chris Holdgraf's blog, and here are some extra 
 
 As you can see below, it is very easy to add an image to my blog post. In this case, it is a small river I have close to home, with its water flowing smoothly, like the process of creating blog posts with this setup!.
 
-<img src="../../_static/images/caudeau.JPG" title="The river next to my home" alt="River Image"/>
+<img src="../../_static/images/waterfall.png" title="The river next to my home" alt="River Image"/>
 
 +++
 

@@ -1,9 +1,10 @@
 ---
 :description: A little bit about me...
-html_meta:
-  "description lang=en": "About Eric Narro. Data Anlysist 📊 | How I went from a career in the wine industry to working with data for an insurance company and code with python every day."
-  "keywords": "Data Analysis, Python, Eric Narro"
-  "property=og:locale": "en_US"
+myst:
+  html_meta:
+    description: "About Eric Narro. Data Analysis 📊 | How I went from a career in the wine industry to working with data for an insurance company and code with Python every day."
+    keywords: "Data Analysis, Python, Eric Narro"
+    property_og_locale: "en_US"
 ---
 # About me
 
@@ -39,4 +40,5 @@ Here is a summary of the path I took:
 * 2020 - 2021: I moved to a different region and changed jobs (I still was in the wine industry). I started developping some python programs for my job, combining what I learned in college and my previous experience with QGIS. I built a QGIS plugin, I also created web applications.. 
 * end of 2021 - 2022: I decided to move forward and seek positions for Data Analyst. I did the IBM Data Science specialization and then the Google Data Analysis specialization on Coursera.
 * June 2022: I got my first position as a Data Analyst
+
 

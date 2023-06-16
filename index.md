@@ -1,10 +1,11 @@
 ---
 html_theme.sidebar_secondary.remove: true
-html_meta:
-  "description lang=en": "Eric Narro's Blog. Data Anlysis 📊 | GIS 🌍 | Python 🐍 | Getting your first job as a Data Anlyst. I share insights, thoughts, tools to grow as a data analyst."
-  "keywords": "Data Analysis, Python"
-  "property=og:locale": "en_US"
-  "property=og:description": "Eric Narro's Blog. Data Anlysis 📊 | GIS 🌍 | Python 🐍 | Getting your first job as a Data Anlyst. I share insights, thoughts, tools to grow as a data analyst."
+myst:
+  html_meta:
+    description: "Eric Narro's Blog. Data Analysis 📊 | GIS 🌍 | Python 🐍 | Getting your first job as a Data Analyst. I share insights, thoughts, tools to grow as a data analyst."
+    keywords: "Data Analysis, Python"
+    property_og_locale: "en_US"
+    property_og_description: "Eric Narro's Blog. Data Analysis 📊 | GIS 🌍 | Python 🐍 | Getting your first job as a Data Analyst. I share insights, thoughts, tools to grow as a data analyst."
 ---
 
 
@@ -40,4 +41,3 @@ about
 projects
 blog
 ```
-
