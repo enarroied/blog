@@ -39,7 +39,12 @@ After some research, I found out Chris Holdgraf's blog, and here are some extra 
 
 As you can see below, it is very easy to add an image to my blog post. In this case, it is a small river I have close to home, with its water flowing smoothly, like the process of creating blog posts with this setup!.
 
-<img src="../../_static/images/waterfall.png" title="The river next to my home" alt="River Image"/>
+```{figure} ../../_static/images/waterfall.png
+:name: waterfall-fig
+:align: center
+:width: 400
+The river next to my home
+```
 
 +++
 

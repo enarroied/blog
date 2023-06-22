@@ -36,13 +36,15 @@ ogp_custom_meta_tags = [
 
 # load extensions
 extensions = [
+    "nbsphinx",
     "myst_nb",
     "ablog",
     "sphinx_design",
     "sphinx.ext.intersphinx",
     "sphinx_copybutton",
-    "sphinxext.opengraph"
-]
+    "sphinxext.opengraph",
+    "IPython.sphinxext.ipython_console_highlighting",
+    ]
 
 # specify project details
 master_doc = "index"
@@ -108,6 +110,7 @@ myst_enable_extensions = [
     "colon_fence", # ::: syntax
     "deflist", #Definitiopn lists
     "html_image", # to add <html> tags with more flexibility
+    "tasklist" #Dynamic lists
 ]
 
 #############################################################################

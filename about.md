@@ -27,7 +27,7 @@ My tasks include :
 
 ## Career transition
 
-It took me time to find my new path as a Data Anlayst, in fact, I think my new path found me! 
+It took me time to find my new path as a Data Anlayst, in fact, I think my new path found me! [I wrote a longer Medium article about this if you are interested](https://medium.com/better-programming/bridging-the-gap-my-journey-to-becoming-a-data-analyst-at-34-ce355f16e93d).
 
 In 2016, I worked for a winery where no GIS software was available. As a vineyard technician, I had to manage 600 ha (hectares) of vines, and that was challenging.
 
