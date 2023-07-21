@@ -1,6 +1,11 @@
 # outline for a myst_nb project with sphinx
 # build with: sphinx-build -nW --keep-going -b html . ./_build/html
 
+#Increase time before running out of time
+sphinx_build_args = ['-E', '-D', 'html_theme_options.timeout=600']
+nbsphinx_timeout = 600
+jupyter_execute_notebooks = "force"
+
 # -- Project information 
 project = "Eric Narro Data 📊" 
 copyright = "2023, Eric Narro"
@@ -163,7 +168,7 @@ post_auto_excerpt = 2
 # nb_execution_excludepatterns = ()
 
 # Execution timeout (seconds)
-# nb_execution_timeout = 30
+nb_execution_timeout = 1000
 
 # Use temporary folder for the execution current working directory
 # nb_execution_in_temp = False

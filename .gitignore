@@ -1,2 +1,16 @@
 .ipynb_checkpoints
 _build
+
+# Ignore PDF files
+*.pdf
+
+# Ignore PNG files
+*.png
+
+# Ignore CSV files
+*.csv
+
+# Ignore GPKG files
+*.gpkg
+
+aoc_map_20230605/
